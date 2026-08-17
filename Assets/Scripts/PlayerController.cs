@@ -17,6 +17,8 @@ public class PlayerController : MonoBehaviour
     private Animator animator;
     private InputSystem_Actions actions;
 
+    private int facingDirection=1;
+
     private bool isFacingRight =true;
     private bool isGrounded =false;
     private bool isWalking =false;
@@ -106,6 +108,7 @@ public class PlayerController : MonoBehaviour
     {
         if (canFlip)
         {
+            facingDirection *= -1; 
             isFacingRight = !isFacingRight;
             transform.Rotate(0f, 180f, 0f);
         }
@@ -117,6 +120,10 @@ public class PlayerController : MonoBehaviour
     private void EnableFlip()
     {
         canFlip = true; 
+    }
+    public int GetFacingDirection()
+    {
+        return facingDirection;
     }
     private void Jump()
     {
