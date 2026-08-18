@@ -9,6 +9,9 @@ public class PlayerController : MonoBehaviour
     public float Speed = 10f;
     public float JumpForce = 16f;
     public float GroundCheckRadius;
+    private float knockbackStartTime;
+
+    [SerializeField] private float knockbackDuration;
 
 
 
@@ -24,8 +27,9 @@ public class PlayerController : MonoBehaviour
     private bool isWalking =false;
     private bool canJump = true;
     private bool canFlip =true;
+    private bool knockback;
 
-
+    [SerializeField] private Vector2 knockbackSpeed;
 
     private Vector2 moveInput;
     private void OnEnable()
@@ -50,6 +54,7 @@ public class PlayerController : MonoBehaviour
         HandleInput();
         turnCheck();
         CheckJump();
+        CheckKnockback();
         UpdateAnimations();
         
     }
@@ -79,14 +84,17 @@ public class PlayerController : MonoBehaviour
     #region Movement
     private void Move()
     {
-        if (moveInput != Vector2.zero)
+        if (moveInput != Vector2.zero && !knockback)
         {
-            playerRb.linearVelocity = new Vector2(moveInput.x * Speed ,playerRb.linearVelocity.y);
+            playerRb.linearVelocity = new Vector2(moveInput.x * Speed, playerRb.linearVelocity.y);
         }
-        else
+        else if (moveInput == Vector2.zero && !knockback)
         {
-            playerRb.linearVelocity = new Vector2(0, playerRb.linearVelocity.y);
+            {
+                playerRb.linearVelocity = new Vector2(0, playerRb.linearVelocity.y);
+            }
         }
+    
 
     }
     private void turnCheck()
@@ -106,7 +114,7 @@ public class PlayerController : MonoBehaviour
     }
     private void Flip()
     {
-        if (canFlip)
+        if (canFlip&& !knockback)
         {
             facingDirection *= -1; 
             isFacingRight = !isFacingRight;
@@ -144,12 +152,27 @@ public class PlayerController : MonoBehaviour
         else { canJump = false; }
     }
     #endregion
+    public void Knockback(int direction)
+    {
+        knockback = true;
+        knockbackStartTime = Time.time;
+        playerRb.linearVelocity = new Vector2(knockbackSpeed.x *direction, knockbackSpeed.y);
 
+    }
+    private void CheckKnockback()
+    {
+        if(Time.time > knockbackStartTime + knockbackDuration && knockback)
+        {
+            knockback =false;
+            playerRb.linearVelocity = new Vector2(0.0f, playerRb.linearVelocity.y);
+        }
+    }
     private void CheckCollisions()
     {
         isGrounded = Physics2D.OverlapCircle(GroundCheck.position,GroundCheckRadius,GroundLayer);
       
     }
+  
     
 }
 

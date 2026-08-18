@@ -11,13 +11,16 @@ public class PlayerCombatController : MonoBehaviour
     private bool isFirstAttack;
     private InputSystem_Actions actions;
     private Animator animator;
+    private PlayerController playerController;
 
+    private float[] attackDetails = new float[2];
     private float lastInputTime = Mathf.NegativeInfinity;
     private void Awake()
     {
         actions =  new InputSystem_Actions();
         animator = GetComponent<Animator>();
         animator.SetBool("canAttack",CombatEnabeled);
+        playerController = GetComponent<PlayerController>();
     }
     private void OnEnable()
     {
@@ -70,9 +73,11 @@ public class PlayerCombatController : MonoBehaviour
         Collider2D[] detecetedObjects = Physics2D.OverlapCircleAll(attack1HitboxPos.position,attack1Radius,DamagableLayer);
 
 
+        attackDetails[0]=attack1Damage;
+        attackDetails[1]=transform.position.x;
         foreach (Collider2D collider in detecetedObjects)
         {
-            collider.transform.parent.SendMessage("Damage", attack1Damage);
+            collider.transform.parent.SendMessage("Damage", attackDetails);
         }
 
     }
@@ -86,5 +91,20 @@ public class PlayerCombatController : MonoBehaviour
     private void OnDrawGizmos()
     {
          Gizmos.DrawWireSphere(attack1HitboxPos.position,attack1Radius);
+    }
+    private void Damage(float[] attackDetails)
+    {
+        int direction;
+
+        if (attackDetails[1] < transform.position.x)
+        {
+            direction = 1;
+        }
+        else
+        {
+            direction = -1;
+        }
+
+        playerController.Knockback(direction);
     }
 }
