@@ -8,7 +8,7 @@ public class BasicEnemyController : MonoBehaviour
         Knockback,
         Dead   
     }
-    [SerializeField] private float groundCheckDistance, wallCheckDistance,movementSpeed,maxHealth,knockbackDuration,lastTouchDamageTime,touchDamageCooldown,touchDamage,touchDamageWidth,touchDamageHeight ;
+    [SerializeField] private float groundCheckDistance, wallCheckDistance,movementSpeed,maxHealth,knockbackDuration,touchDamageCooldown,touchDamage,touchDamageWidth,touchDamageHeight ;
 
     [SerializeField] private Vector2 knockbackSpeed ;
 
@@ -22,7 +22,7 @@ public class BasicEnemyController : MonoBehaviour
 
     private int facingDirection,damageDirection;
 
-    private float currentHealth,knockbackStartTime;
+    private float currentHealth,knockbackStartTime, lastTouchDamageTime;
 
     private float[] attackDetails  = new float[2];
 

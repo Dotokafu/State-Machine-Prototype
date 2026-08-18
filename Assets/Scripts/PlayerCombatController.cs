@@ -12,6 +12,7 @@ public class PlayerCombatController : MonoBehaviour
     private InputSystem_Actions actions;
     private Animator animator;
     private PlayerController playerController;
+    private PlayerStats playerStats;
 
     private float[] attackDetails = new float[2];
     private float lastInputTime = Mathf.NegativeInfinity;
@@ -21,6 +22,7 @@ public class PlayerCombatController : MonoBehaviour
         animator = GetComponent<Animator>();
         animator.SetBool("canAttack",CombatEnabeled);
         playerController = GetComponent<PlayerController>();
+        playerStats = GetComponent<PlayerStats>();
     }
     private void OnEnable()
     {
@@ -96,6 +98,7 @@ public class PlayerCombatController : MonoBehaviour
     {
         int direction;
 
+        playerStats.DecreseHealth(attackDetails[0]);
         if (attackDetails[1] < transform.position.x)
         {
             direction = 1;
