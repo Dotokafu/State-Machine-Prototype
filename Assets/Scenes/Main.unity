@@ -144,7 +144,7 @@ Transform:
   m_GameObject: {fileID: 11988184}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.11, y: -0.192, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -35563,6 +35563,8 @@ MonoBehaviour:
   idleStateData: {fileID: 11400000, guid: 1108ecd85a18c16469f7b6c8827afb5a, type: 2}
   moveStateData: {fileID: 11400000, guid: 0392c115db62911458f9dd67ab56a8a0, type: 2}
   playerDetectedStateData: {fileID: 11400000, guid: 130547bdcb193854497d57972cc2e76a, type: 2}
+  chargeStateData: {fileID: 11400000, guid: e7721aa506e698d4cb401f246221f8e9, type: 2}
+  playerLookForPlayerStateData: {fileID: 11400000, guid: cfbb2cabd347fb04cab221c7023e0e78, type: 2}
 --- !u!1 &1698230500
 GameObject:
   m_ObjectHideFlags: 0
