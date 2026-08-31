@@ -175,7 +175,7 @@ Transform:
   m_GameObject: {fileID: 94962356}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 16.08, y: -0.44, z: 0}
+  m_LocalPosition: {x: 7.37, y: 1.98, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -217,6 +217,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5820860640065535112, guid: f4d550b02caa3e34cab38bc480561a41, type: 3}
   m_PrefabInstance: {fileID: 5037449828626037467}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &444352298
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 444352299}
+  m_Layer: 8
+  m_Name: GroundCheck
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &444352299
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 444352298}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.07, y: -0.63, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1282458030}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -412,7 +443,7 @@ Transform:
   m_GameObject: {fileID: 569234722}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.602, y: 0.137, z: 0}
+  m_LocalPosition: {x: 0.76, y: 0.137, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -35342,6 +35373,7 @@ Transform:
   - {fileID: 1929711091}
   - {fileID: 11988185}
   - {fileID: 569234723}
+  - {fileID: 444352299}
   m_Father: {fileID: 1494985559}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1282458031
@@ -35382,7 +35414,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.25, y: 1.625}
+    oldSize: {x: 2.0625, y: 1.5625}
     newSize: {x: 2.0625, y: 1.5625}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -35605,12 +35637,15 @@ MonoBehaviour:
   wallCheck: {fileID: 269306761}
   LedgeCheck: {fileID: 1946342174}
   PlayerCheck: {fileID: 11988185}
+  GroundCheck: {fileID: 444352299}
   idleStateData: {fileID: 11400000, guid: 1108ecd85a18c16469f7b6c8827afb5a, type: 2}
   moveStateData: {fileID: 11400000, guid: 0392c115db62911458f9dd67ab56a8a0, type: 2}
   playerDetectedStateData: {fileID: 11400000, guid: 130547bdcb193854497d57972cc2e76a, type: 2}
   chargeStateData: {fileID: 11400000, guid: e7721aa506e698d4cb401f246221f8e9, type: 2}
   playerLookForPlayerStateData: {fileID: 11400000, guid: cfbb2cabd347fb04cab221c7023e0e78, type: 2}
   meleeAttackStateData: {fileID: 11400000, guid: ba17a50acd261844bb29e786027f8365, type: 2}
+  stunStateData: {fileID: 11400000, guid: 863a644b9d8bab34daafc754cd8a4368, type: 2}
+  deadStateData: {fileID: 11400000, guid: ac65bd63c8b5f2a4d89c3a72e0509610, type: 2}
   meleeAttackPosition: {fileID: 569234723}
 --- !u!1 &1698230500
 GameObject:
@@ -35822,6 +35857,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2789469329302704737, guid: f4d550b02caa3e34cab38bc480561a41, type: 3}
+      propertyPath: stunDamageAmount
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4860208381761237465, guid: f4d550b02caa3e34cab38bc480561a41, type: 3}
       propertyPath: m_Name
       value: Player

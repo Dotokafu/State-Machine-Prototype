@@ -29,13 +29,16 @@ public class E1_PlayerDetectedState : PlayerDetactedState
         }
         else if (performLongRangeAction)
         {
-            
+
             stateMachine.ChangeState(enemy.chargeState);
-            
+
         }
         else if (!isPlayerInMaxAgroRange)
         {
             stateMachine.ChangeState(enemy.lookForPlayerState);
+        }
+        else if (!isDetectingLedge) { entity.Flip();
+            stateMachine.ChangeState(enemy.moveState);
         }
 
         

@@ -3,7 +3,7 @@ using UnityEngine;
 public class PlayerCombatController : MonoBehaviour
 {
     [SerializeField] private bool CombatEnabeled;
-    [SerializeField] private float inputTimer,attack1Radius,attack1Damage;
+    [SerializeField] private float inputTimer,attack1Radius,attack1Damage,stunDamageAmount;
     [SerializeField] private Transform attack1HitboxPos;
     [SerializeField] private LayerMask DamagableLayer;
     private bool gotInput;
@@ -77,6 +77,7 @@ public class PlayerCombatController : MonoBehaviour
 
         attackDetails.damageAmount=attack1Damage;
         attackDetails.position=transform.position;
+        attackDetails.stunDamageAmount=stunDamageAmount;
         foreach (Collider2D collider in detecetedObjects)
         {
             collider.transform.parent.SendMessage("Damage", attackDetails);
