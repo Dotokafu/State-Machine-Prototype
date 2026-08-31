@@ -26,17 +26,26 @@ public class E1_ChargeState : ChargeState
     public override void LogicUpdate()
     {
         base.LogicUpdate();
-        if (!isDetectingLedge || isDetectingWall)
+        if (performCloseRangeAction)
+        {
+            stateMachine.ChangeState(enemy.meleeAttackState);
+        }
+        else if (!isDetectingLedge || isDetectingWall)
         {
             stateMachine.ChangeState(enemy.lookForPlayerState);
         }
         else if (isChargeTimeOver)
         {
+
             if (isPlayerMinAgroRange)
             {
                 stateMachine.ChangeState(enemy.playerDetectedState);
             }
+            else {
+                stateMachine.ChangeState(enemy.lookForPlayerState);
+            }
         }
+      
     }
 
     public override void PhysicsUpdate()

@@ -1,3 +1,4 @@
+using NUnit.Framework.Constraints;
 using UnityEngine;
 
 public class Entity : MonoBehaviour
@@ -13,20 +14,28 @@ public class Entity : MonoBehaviour
 
     public GameObject aliveGO {  get; private set; }
 
+    public AnimationToStateMachine animationToStateMachine { get; private set; }
+
     [SerializeField] private Transform wallCheck;
     [SerializeField] private Transform LedgeCheck;
     [SerializeField] private Transform PlayerCheck;
 
-
+    private float currentHealth;
+    private int lastDamageDirection;
     private Vector2 velocityWorkspace;
+
+
 
     public virtual void Start()
     {
         facingDirection = 1;
+        currentHealth = entityData.maxHealth;
         aliveGO = transform.Find("Alive").gameObject;
         rb = aliveGO.GetComponent<Rigidbody2D>();
         animator = aliveGO.GetComponent<Animator>();
+        animationToStateMachine = aliveGO.GetComponent<AnimationToStateMachine>();
 
+        
         stateMachine = new FiniteStateMachine();
     }
 
@@ -64,6 +73,31 @@ public class Entity : MonoBehaviour
         return Physics2D.Raycast(PlayerCheck.position, aliveGO.transform.right, entityData.maxAgroDistance, entityData.playerLayer);
     }
 
+    public virtual bool CheckPlayerInCloseRangeAction()
+    {
+        return Physics2D.Raycast(PlayerCheck.position,aliveGO.transform.right,entityData.closeRangeActionDistance,entityData.playerLayer);
+    }
+    public virtual void DamageHop(float velocity)
+    {
+        velocityWorkspace.Set(rb.linearVelocity.x, velocity);
+        rb.linearVelocity = velocityWorkspace;
+    }
+    public virtual void Damage(AttackDetails attackDetails)
+    {
+        currentHealth -= attackDetails.damageAmount;
+
+        DamageHop(entityData.hopSpeed);
+
+        if (attackDetails.position.x > aliveGO.transform.position.x)
+        {
+            lastDamageDirection = -1;
+        }
+        else
+        {
+            lastDamageDirection = 1;
+        }
+    }
+
     public virtual void Flip()
     {
         facingDirection *= -1;
@@ -74,6 +108,10 @@ public class Entity : MonoBehaviour
     {
         Gizmos.DrawLine(wallCheck.position, wallCheck.position + (Vector3)(Vector2.right * facingDirection * entityData.wallCheckDistance));
         Gizmos.DrawLine(LedgeCheck.position, LedgeCheck.position + (Vector3)(Vector2.down * entityData.ledgeCheckDistance));
+
+        Gizmos.DrawWireSphere((PlayerCheck.position) +(Vector3)(Vector2.right *entityData.closeRangeActionDistance), 0.2f);
+        Gizmos.DrawWireSphere((PlayerCheck.position) + (Vector3)(Vector2.right * entityData.maxAgroDistance), 0.2f);
+        Gizmos.DrawWireSphere((PlayerCheck.position) + (Vector3)(Vector2.right * entityData.minAgroDistance), 0.2f);
     }
 
 

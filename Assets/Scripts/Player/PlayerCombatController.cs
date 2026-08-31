@@ -14,7 +14,7 @@ public class PlayerCombatController : MonoBehaviour
     private PlayerController playerController;
     private PlayerStats playerStats;
 
-    private float[] attackDetails = new float[2];
+    private AttackDetails attackDetails ;
     private float lastInputTime = Mathf.NegativeInfinity;
     private void Awake()
     {
@@ -75,8 +75,8 @@ public class PlayerCombatController : MonoBehaviour
         Collider2D[] detecetedObjects = Physics2D.OverlapCircleAll(attack1HitboxPos.position,attack1Radius,DamagableLayer);
 
 
-        attackDetails[0]=attack1Damage;
-        attackDetails[1]=transform.position.x;
+        attackDetails.damageAmount=attack1Damage;
+        attackDetails.position=transform.position;
         foreach (Collider2D collider in detecetedObjects)
         {
             collider.transform.parent.SendMessage("Damage", attackDetails);
@@ -94,12 +94,12 @@ public class PlayerCombatController : MonoBehaviour
     {
          Gizmos.DrawWireSphere(attack1HitboxPos.position,attack1Radius);
     }
-    private void Damage(float[] attackDetails)
+    private void Damage(AttackDetails attackDetails)
     {
         int direction;
 
-        playerStats.DecreseHealth(attackDetails[0]);
-        if (attackDetails[1] < transform.position.x)
+        playerStats.DecreseHealth(attackDetails.damageAmount);
+        if (attackDetails.position.x < transform.position.x)
         {
             direction = 1;
         }
