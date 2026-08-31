@@ -10,19 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 800b817d095c3574e99cb6425597dffd, type: 3}
-  m_Name: E1_BaseData
+  m_Name: E2_BaseData
   m_EditorClassIdentifier: Assembly-CSharp::D_Entity
-  maxHealth: 50
+  maxHealth: 30
   hopSpeed: 10
   wallCheckDistance: 0.2
-  ledgeCheckDistance: 1
+  ledgeCheckDistance: 0.4
   groundCheckRadius: 0.3
   stunResistance: 3
   stunRecoveryTime: 2
-  maxAgroDistance: 8
-  minAgroDistance: 7
+  maxAgroDistance: 4
+  minAgroDistance: 3
   hitParticle: {fileID: 8570215123516574724, guid: 7365d408e9a0a884bbc5ab78efb9d1a4, type: 3}
-  closeRangeActionDistance: 1.75
+  closeRangeActionDistance: 1
   groundLayer:
     serializedVersion: 2
     m_Bits: 8

@@ -9,8 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 35eda016c12bf5e43bb8242e91cb3b0e, type: 3}
-  m_Name: E1_ChargeStateData
-  m_EditorClassIdentifier: Assembly-CSharp::D_ChargeState
-  chargeSpeed: 6
-  chargeTime: 1.5
+  m_Script: {fileID: 11500000, guid: 0044fc11cb7d31c4283d1be6d2fca199, type: 3}
+  m_Name: E2_MoveStateData
+  m_EditorClassIdentifier: Assembly-CSharp::D_MoveState
+  movementSpeed: 3
