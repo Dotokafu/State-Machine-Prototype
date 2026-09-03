@@ -29,9 +29,9 @@ public class E2_StunState : StunState
         if (isStunTimeOver)
         {
             if (performCloseRangeAction) { stateMachine.ChangeState(enemy.meleeAttackState); }
-            else if (isPlayerInMinAgroRange) 
-            { 
-                //ShootArrow
+           else if (isPlayerInMinAgroRange)
+            {
+                stateMachine.ChangeState(enemy.dodgeState);
             }
             else
             {
