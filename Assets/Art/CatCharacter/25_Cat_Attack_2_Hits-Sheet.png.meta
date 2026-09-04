@@ -1,0 +1,429 @@
+fileFormatVersion: 2
+guid: 4da043e028becf94dbf7dddfd7fb9bc9
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2540253948627810780
+    second: 25_Cat_Attack_2_Hits-Sheet_0
+  - first:
+      213: 5450230057243468201
+    second: 25_Cat_Attack_2_Hits-Sheet_1
+  - first:
+      213: 7841560194678244086
+    second: 25_Cat_Attack_2_Hits-Sheet_2
+  - first:
+      213: 4300118605488194074
+    second: 25_Cat_Attack_2_Hits-Sheet_3
+  - first:
+      213: -9031164987314544001
+    second: 25_Cat_Attack_2_Hits-Sheet_4
+  - first:
+      213: 4824465498983068935
+    second: 25_Cat_Attack_2_Hits-Sheet_5
+  - first:
+      213: 8294243304264656634
+    second: 25_Cat_Attack_2_Hits-Sheet_6
+  - first:
+      213: 4952142148137176842
+    second: 25_Cat_Attack_2_Hits-Sheet_7
+  - first:
+      213: 279878847028656952
+    second: 25_Cat_Attack_2_Hits-Sheet_8
+  - first:
+      213: -1850256970691187405
+    second: 25_Cat_Attack_2_Hits-Sheet_9
+  - first:
+      213: 2707434515010122441
+    second: 25_Cat_Attack_2_Hits-Sheet_10
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: 25_Cat_Attack_2_Hits-Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 3
+        width: 15
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd97e37e18bc04320800000000000000
+      internalID: 2540253948627810780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 25_Cat_Attack_2_Hits-Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 3
+        width: 16
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a1672a4c5b13ab40800000000000000
+      internalID: 5450230057243468201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 25_Cat_Attack_2_Hits-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 3
+        width: 35
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f2c3a06371d2dc60800000000000000
+      internalID: 7841560194678244086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 25_Cat_Attack_2_Hits-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 3
+        width: 35
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a120c24b6171dab30800000000000000
+      internalID: 4300118605488194074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 25_Cat_Attack_2_Hits-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 3
+        width: 25
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f72eb2f0b4bdaa280800000000000000
+      internalID: -9031164987314544001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 25_Cat_Attack_2_Hits-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 5
+        width: 13
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 705730a6fc1f3f240800000000000000
+      internalID: 4824465498983068935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 25_Cat_Attack_2_Hits-Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 3
+        width: 16
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af66b5727521b1370800000000000000
+      internalID: 8294243304264656634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 25_Cat_Attack_2_Hits-Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 407
+        y: 3
+        width: 31
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0fc4f0db0b89b440800000000000000
+      internalID: 4952142148137176842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 25_Cat_Attack_2_Hits-Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 471
+        y: 3
+        width: 31
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83bf949145452e300800000000000000
+      internalID: 279878847028656952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 25_Cat_Attack_2_Hits-Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 532
+        y: 3
+        width: 29
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33de2c696119256e0800000000000000
+      internalID: -1850256970691187405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 25_Cat_Attack_2_Hits-Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 599
+        y: 3
+        width: 15
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c27fc7c85db29520800000000000000
+      internalID: 2707434515010122441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      25_Cat_Attack_2_Hits-Sheet_0: 2540253948627810780
+      25_Cat_Attack_2_Hits-Sheet_1: 5450230057243468201
+      25_Cat_Attack_2_Hits-Sheet_10: 2707434515010122441
+      25_Cat_Attack_2_Hits-Sheet_2: 7841560194678244086
+      25_Cat_Attack_2_Hits-Sheet_3: 4300118605488194074
+      25_Cat_Attack_2_Hits-Sheet_4: -9031164987314544001
+      25_Cat_Attack_2_Hits-Sheet_5: 4824465498983068935
+      25_Cat_Attack_2_Hits-Sheet_6: 8294243304264656634
+      25_Cat_Attack_2_Hits-Sheet_7: 4952142148137176842
+      25_Cat_Attack_2_Hits-Sheet_8: 279878847028656952
+      25_Cat_Attack_2_Hits-Sheet_9: -1850256970691187405
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
