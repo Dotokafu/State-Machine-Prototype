@@ -11,9 +11,9 @@ public class Player : MonoBehaviour
     public PlayerLandState LandState { get; private set; }
     public PlayerInAirState InAirState { get; private set; }
 
-    public PlayerWallClimbState WallClimbState { get; private set; }
+    public PlayerWallJumpState wallJumpState { get; private set; }
 
-    public PlayerWallGrabState WallGrabState { get; private set; }
+
 
     public PlayerWallSlideState WallSlideState { get; private set; }
 
@@ -37,7 +37,7 @@ public class Player : MonoBehaviour
 
     #region Other Vars
     public Vector2 currentVelocity { get; private set; }
-    private Vector2 worksspace;
+    private Vector2 workspace;
     public int FacingDirection { get; private set; }
     #endregion
 
@@ -51,8 +51,7 @@ public class Player : MonoBehaviour
         JumpState = new PlayerJumpState(this, StateMachine, playerData, "inAir");
         LandState = new PlayerLandState(this, StateMachine, playerData, "land");
         InAirState = new PlayerInAirState(this, StateMachine, playerData, "inAir");
-        WallClimbState = new PlayerWallClimbState(this ,StateMachine,playerData,"wallClimb");
-        WallGrabState = new PlayerWallGrabState(this, StateMachine, playerData, "wallGrab");
+        wallJumpState = new PlayerWallJumpState(this, StateMachine, playerData, "inAir");
         WallSlideState = new PlayerWallSlideState(this, StateMachine, playerData, "wallSlide");
  
         InputHandler = GetComponent<PlayerInputHandler1>();
@@ -80,17 +79,25 @@ public class Player : MonoBehaviour
     #endregion
 
     #region Set Functions
+
+    public void SetVelocity(float velocity ,Vector2 angle,int direction)
+    {
+        angle.Normalize();
+        workspace.Set(angle.x *velocity *direction, angle.y *velocity );
+        rb.linearVelocity = workspace;
+        currentVelocity = workspace;
+    }
     public void SetVelocityX(float velocity)
     {
-        worksspace.Set(velocity, currentVelocity.y);
-        rb.linearVelocity = worksspace;
-        currentVelocity =worksspace;    
+        workspace.Set(velocity, currentVelocity.y);
+        rb.linearVelocity = workspace;
+        currentVelocity =workspace;    
     }
     public void SetVelocityY(float velocity) 
     {
-        worksspace.Set(currentVelocity.x, velocity);
-        rb.linearVelocity = worksspace;
-        currentVelocity =worksspace;
+        workspace.Set(currentVelocity.x, velocity);
+        rb.linearVelocity = workspace;
+        currentVelocity =workspace;
     }
     #endregion
 
@@ -111,6 +118,10 @@ public class Player : MonoBehaviour
     public bool CheckWall()
     {
         return Physics2D.Raycast(WallCheck.position, Vector2.right * FacingDirection, playerData.wallCheckDistance, playerData.groundLayer);
+    }
+    public bool CheckWallBack()
+    {
+        return Physics2D.Raycast(WallCheck.position, Vector2.right * -FacingDirection, playerData.wallCheckDistance, playerData.groundLayer);
     }
     #endregion
 

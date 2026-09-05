@@ -9,12 +9,10 @@ public class PlayerData : ScriptableObject
     public float jumpVelocity = 10f;
     public int amountOfJumps = 1;
 
-
-    [Header("Check Veriables")]
-    public float GroundCheckRadius= 0.3f;
-    public float wallCheckDistance = 0.5f;
-    public LayerMask groundLayer;
-
+    [Header("Wall Jump State")]
+    public float wallJumpVelocity = 20;
+    public float wallJumpTime = 0.4f;
+    public Vector2 wallJumpAngle = new Vector2(1, 2);
 
     [Header("InAir State")]
     public float cayoteTime = 0.2f;
@@ -24,5 +22,10 @@ public class PlayerData : ScriptableObject
     public float wallSlideSpeed = 3f;
 
 
-    
+
+    [Header("Check Veriables")]
+    public float GroundCheckRadius = 0.3f;
+    public float wallCheckDistance = 0.5f;
+    public LayerMask groundLayer;
+
 }
