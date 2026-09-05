@@ -14,7 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerData
   movementVelocity: 10
   jumpVelocity: 15
-  GroundCheckRadius: 0.3
+  amountOfJumps: 1
+  GroundCheckRadius: 0.15
+  wallCheckDistance: 0.5
   groundLayer:
     serializedVersion: 2
     m_Bits: 8
+  cayoteTime: 0.2
+  variableJumpHeightMultiplier: 0.5
+  wallSlideSpeed: 3

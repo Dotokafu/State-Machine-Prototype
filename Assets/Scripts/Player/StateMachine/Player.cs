@@ -11,6 +11,12 @@ public class Player : MonoBehaviour
     public PlayerLandState LandState { get; private set; }
     public PlayerInAirState InAirState { get; private set; }
 
+    public PlayerWallClimbState WallClimbState { get; private set; }
+
+    public PlayerWallGrabState WallGrabState { get; private set; }
+
+    public PlayerWallSlideState WallSlideState { get; private set; }
+
 
 
 
@@ -25,6 +31,7 @@ public class Player : MonoBehaviour
     #endregion
     #region Check Transforms
     [SerializeField] private Transform GroundCheck;
+    [SerializeField] private Transform WallCheck;
 
     #endregion
 
@@ -44,6 +51,9 @@ public class Player : MonoBehaviour
         JumpState = new PlayerJumpState(this, StateMachine, playerData, "inAir");
         LandState = new PlayerLandState(this, StateMachine, playerData, "land");
         InAirState = new PlayerInAirState(this, StateMachine, playerData, "inAir");
+        WallClimbState = new PlayerWallClimbState(this ,StateMachine,playerData,"wallClimb");
+        WallGrabState = new PlayerWallGrabState(this, StateMachine, playerData, "wallGrab");
+        WallSlideState = new PlayerWallSlideState(this, StateMachine, playerData, "wallSlide");
  
         InputHandler = GetComponent<PlayerInputHandler1>();
     }
@@ -96,6 +106,11 @@ public class Player : MonoBehaviour
     public bool CheckGrounded()
     {
         return Physics2D.OverlapCircle(GroundCheck.position, playerData.GroundCheckRadius, playerData.groundLayer);
+    }
+
+    public bool CheckWall()
+    {
+        return Physics2D.Raycast(WallCheck.position, Vector2.right * FacingDirection, playerData.wallCheckDistance, playerData.groundLayer);
     }
     #endregion
 

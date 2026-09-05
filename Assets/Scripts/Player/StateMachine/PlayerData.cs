@@ -12,9 +12,17 @@ public class PlayerData : ScriptableObject
 
     [Header("Check Veriables")]
     public float GroundCheckRadius= 0.3f;
+    public float wallCheckDistance = 0.5f;
     public LayerMask groundLayer;
+
 
     [Header("InAir State")]
     public float cayoteTime = 0.2f;
     public float variableJumpHeightMultiplier=0.5f;
+
+    [Header("Wall Slide State")]
+    public float wallSlideSpeed = 3f;
+
+
+    
 }
