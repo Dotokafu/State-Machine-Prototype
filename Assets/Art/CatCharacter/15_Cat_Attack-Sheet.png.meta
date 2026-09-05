@@ -150,12 +150,12 @@ TextureImporter:
       name: 15_Cat_Attack-Sheet_0
       rect:
         serializedVersion: 2
-        x: 23
-        y: 3
-        width: 15
-        height: 17
+        x: 0
+        y: 0
+        width: 64
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -172,12 +172,12 @@ TextureImporter:
       name: 15_Cat_Attack-Sheet_1
       rect:
         serializedVersion: 2
-        x: 85
-        y: 3
-        width: 16
-        height: 15
+        x: 64
+        y: 0
+        width: 64
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -194,12 +194,12 @@ TextureImporter:
       name: 15_Cat_Attack-Sheet_2
       rect:
         serializedVersion: 2
-        x: 151
-        y: 3
-        width: 34
-        height: 22
+        x: 128
+        y: 0
+        width: 64
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -216,12 +216,12 @@ TextureImporter:
       name: 15_Cat_Attack-Sheet_3
       rect:
         serializedVersion: 2
-        x: 215
-        y: 3
-        width: 17
-        height: 20
+        x: 192
+        y: 0
+        width: 64
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -238,12 +238,12 @@ TextureImporter:
       name: 15_Cat_Attack-Sheet_4
       rect:
         serializedVersion: 2
-        x: 232
-        y: 6
-        width: 9
-        height: 6
+        x: 256
+        y: 0
+        width: 64
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -260,12 +260,12 @@ TextureImporter:
       name: 15_Cat_Attack-Sheet_5
       rect:
         serializedVersion: 2
-        x: 233
-        y: 6
-        width: 15
-        height: 19
+        x: 320
+        y: 0
+        width: 64
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -278,55 +278,11 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: 15_Cat_Attack-Sheet_6
-      rect:
-        serializedVersion: 2
-        x: 279
-        y: 3
-        width: 33
-        height: 21
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 22a527f6842f60090800000000000000
-      internalID: -8068495289466332638
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 15_Cat_Attack-Sheet_7
-      rect:
-        serializedVersion: 2
-        x: 343
-        y: 3
-        width: 16
-        height: 20
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 6a9e405bde062e040800000000000000
-      internalID: 4675405937224509862
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: e1f9e35244842344a89ff705a5616488
     internalID: 0
     vertices: []
     indices: 
@@ -334,7 +290,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":32.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
       15_Cat_Attack-Sheet_0: -8556142984373510678
       15_Cat_Attack-Sheet_1: -8514668615929742577
@@ -342,8 +300,6 @@ TextureImporter:
       15_Cat_Attack-Sheet_3: 7511772040829617533
       15_Cat_Attack-Sheet_4: 6310837276391468448
       15_Cat_Attack-Sheet_5: 8025934569731840815
-      15_Cat_Attack-Sheet_6: -8068495289466332638
-      15_Cat_Attack-Sheet_7: 4675405937224509862
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

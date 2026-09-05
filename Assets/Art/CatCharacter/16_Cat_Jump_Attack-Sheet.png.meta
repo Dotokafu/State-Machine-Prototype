@@ -159,12 +159,12 @@ TextureImporter:
       name: 16_Cat_Jump_Attack-Sheet_0
       rect:
         serializedVersion: 2
-        x: 23
-        y: 5
-        width: 16
-        height: 16
+        x: 0
+        y: 0
+        width: 64
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -181,12 +181,12 @@ TextureImporter:
       name: 16_Cat_Jump_Attack-Sheet_1
       rect:
         serializedVersion: 2
-        x: 87
-        y: 3
-        width: 30
-        height: 19
+        x: 64
+        y: 0
+        width: 64
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -203,12 +203,12 @@ TextureImporter:
       name: 16_Cat_Jump_Attack-Sheet_2
       rect:
         serializedVersion: 2
-        x: 153
-        y: 3
-        width: 24
-        height: 20
+        x: 128
+        y: 0
+        width: 64
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -225,12 +225,12 @@ TextureImporter:
       name: 16_Cat_Jump_Attack-Sheet_3
       rect:
         serializedVersion: 2
-        x: 167
-        y: 12
-        width: 14
-        height: 10
+        x: 192
+        y: 0
+        width: 64
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -247,12 +247,12 @@ TextureImporter:
       name: 16_Cat_Jump_Attack-Sheet_4
       rect:
         serializedVersion: 2
-        x: 172
-        y: 4
-        width: 8
-        height: 10
+        x: 256
+        y: 0
+        width: 64
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -269,12 +269,12 @@ TextureImporter:
       name: 16_Cat_Jump_Attack-Sheet_5
       rect:
         serializedVersion: 2
-        x: 218
-        y: 4
-        width: 12
-        height: 19
+        x: 320
+        y: 0
+        width: 64
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -287,121 +287,11 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: 16_Cat_Jump_Attack-Sheet_6
-      rect:
-        serializedVersion: 2
-        x: 227
-        y: 3
-        width: 14
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ae68be9e9f0a97140800000000000000
-      internalID: 4717979079879132906
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 16_Cat_Jump_Attack-Sheet_7
-      rect:
-        serializedVersion: 2
-        x: 233
-        y: 12
-        width: 12
-        height: 10
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 3df16d2f92223f730800000000000000
-      internalID: 4031603654989848531
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 16_Cat_Jump_Attack-Sheet_8
-      rect:
-        serializedVersion: 2
-        x: 236
-        y: 4
-        width: 8
-        height: 9
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 4dc6323ba51107170800000000000000
-      internalID: 8174052404927622356
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 16_Cat_Jump_Attack-Sheet_9
-      rect:
-        serializedVersion: 2
-        x: 283
-        y: 5
-        width: 12
-        height: 19
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: c2de54c2e04a8ade0800000000000000
-      internalID: -1321626109853962964
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 16_Cat_Jump_Attack-Sheet_10
-      rect:
-        serializedVersion: 2
-        x: 345
-        y: 4
-        width: 13
-        height: 19
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f39c8d5685dd66f40800000000000000
-      internalID: 5721503748356360511
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: d1acabdb79412c34e9d37f6b880ab52f
     internalID: 0
     vertices: []
     indices: 
@@ -409,19 +299,16 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":32.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
       16_Cat_Jump_Attack-Sheet_0: 5039372020401356273
       16_Cat_Jump_Attack-Sheet_1: 6360786818468782142
-      16_Cat_Jump_Attack-Sheet_10: 5721503748356360511
       16_Cat_Jump_Attack-Sheet_2: -9110551686789511152
       16_Cat_Jump_Attack-Sheet_3: 7949003562645088358
       16_Cat_Jump_Attack-Sheet_4: -4233636610667774305
       16_Cat_Jump_Attack-Sheet_5: -2578088114372029379
-      16_Cat_Jump_Attack-Sheet_6: 4717979079879132906
-      16_Cat_Jump_Attack-Sheet_7: 4031603654989848531
-      16_Cat_Jump_Attack-Sheet_8: 8174052404927622356
-      16_Cat_Jump_Attack-Sheet_9: -1321626109853962964
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

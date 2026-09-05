@@ -147,12 +147,12 @@ TextureImporter:
       name: 18_Cat_Death-Sheet_0
       rect:
         serializedVersion: 2
-        x: 6
-        y: 4
-        width: 15
-        height: 21
+        x: 0
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -169,12 +169,12 @@ TextureImporter:
       name: 18_Cat_Death-Sheet_1
       rect:
         serializedVersion: 2
-        x: 39
-        y: 4
-        width: 15
-        height: 21
+        x: 32
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -191,12 +191,12 @@ TextureImporter:
       name: 18_Cat_Death-Sheet_2
       rect:
         serializedVersion: 2
-        x: 71
-        y: 4
-        width: 15
-        height: 21
+        x: 64
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -213,12 +213,12 @@ TextureImporter:
       name: 18_Cat_Death-Sheet_3
       rect:
         serializedVersion: 2
-        x: 103
-        y: 4
-        width: 15
-        height: 21
+        x: 96
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -235,12 +235,12 @@ TextureImporter:
       name: 18_Cat_Death-Sheet_4
       rect:
         serializedVersion: 2
-        x: 134
-        y: 1
-        width: 21
-        height: 24
+        x: 128
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -257,12 +257,12 @@ TextureImporter:
       name: 18_Cat_Death-Sheet_5
       rect:
         serializedVersion: 2
-        x: 166
-        y: 1
-        width: 21
-        height: 24
+        x: 160
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -279,12 +279,12 @@ TextureImporter:
       name: 18_Cat_Death-Sheet_6
       rect:
         serializedVersion: 2
-        x: 198
+        x: 192
         y: 0
-        width: 55
-        height: 25
+        width: 32
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -297,11 +297,33 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: 18_Cat_Death-Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52ca740bbc3f77e44a69f83e8f7deb7d
+      internalID: 26453942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 9409839e792d71d4c91e40ce4de47424
     internalID: 0
     vertices: []
     indices: 
@@ -309,7 +331,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":32.0,"y":32.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
       18_Cat_Death-Sheet_0: -5040707312291051848
       18_Cat_Death-Sheet_1: -5371681986142574912
@@ -318,6 +342,7 @@ TextureImporter:
       18_Cat_Death-Sheet_4: -7303949146850240492
       18_Cat_Death-Sheet_5: 2631483492464117732
       18_Cat_Death-Sheet_6: -7994981479249950441
+      18_Cat_Death-Sheet_7: 26453942
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

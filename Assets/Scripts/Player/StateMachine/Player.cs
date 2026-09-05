@@ -7,6 +7,10 @@ public class Player : MonoBehaviour
     public PlayerIdleState IdleState { get; private set; }
     public PlayerMoveState MoveState { get; private set; }
 
+    public PlayerJumpState JumpState { get; private set; }
+    public PlayerLandState LandState { get; private set; }
+    public PlayerInAirState InAirState { get; private set; }
+
 
 
 
@@ -19,7 +23,10 @@ public class Player : MonoBehaviour
     public Animator Animator {  get; private set; }
     public PlayerInputHandler1 InputHandler { get; private set; }
     #endregion
+    #region Check Transforms
+    [SerializeField] private Transform GroundCheck;
 
+    #endregion
 
     #region Other Vars
     public Vector2 currentVelocity { get; private set; }
@@ -34,6 +41,9 @@ public class Player : MonoBehaviour
 
         IdleState = new PlayerIdleState(this,StateMachine,playerData,"idle");
         MoveState = new PlayerMoveState(this, StateMachine, playerData, "move");
+        JumpState = new PlayerJumpState(this, StateMachine, playerData, "inAir");
+        LandState = new PlayerLandState(this, StateMachine, playerData, "land");
+        InAirState = new PlayerInAirState(this, StateMachine, playerData, "inAir");
  
         InputHandler = GetComponent<PlayerInputHandler1>();
     }
@@ -66,6 +76,12 @@ public class Player : MonoBehaviour
         rb.linearVelocity = worksspace;
         currentVelocity =worksspace;    
     }
+    public void SetVelocityY(float velocity) 
+    {
+        worksspace.Set(currentVelocity.x, velocity);
+        rb.linearVelocity = worksspace;
+        currentVelocity =worksspace;
+    }
     #endregion
 
     #region Check Functions
@@ -76,10 +92,26 @@ public class Player : MonoBehaviour
             Flip();
         }
     }
+
+    public bool CheckGrounded()
+    {
+        return Physics2D.OverlapCircle(GroundCheck.position, playerData.GroundCheckRadius, playerData.groundLayer);
+    }
     #endregion
 
 
     #region Other Functions
+
+
+    private void AnimationTrigger()
+    {
+        StateMachine.CurrentState.AnimationTrigger();
+    }
+
+    private void AnimationFinnishTrigger()
+    {
+        StateMachine.CurrentState.AnimationFinishTrigger();
+    }
     private void Flip()
     {
         FacingDirection *= -1;

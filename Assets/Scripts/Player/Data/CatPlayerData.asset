@@ -12,3 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e988a7efcd5a4be4c9e58b2652270571, type: 3}
   m_Name: CatPlayerData
   m_EditorClassIdentifier: Assembly-CSharp::PlayerData
+  movementVelocity: 10
+  jumpVelocity: 15
+  GroundCheckRadius: 0.3
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 8
