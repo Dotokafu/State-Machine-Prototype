@@ -15,6 +15,8 @@ public class Player : MonoBehaviour
 
     public PlayerAttackState PrimaryAttackState { get; private set; }
 
+    public PlayerAttack2State SecondaryAttackState { get; private set; }
+
     //public PlayerAttackState RangedAttackState { get; private set; }
 
     public PlayerAirAttackState AirAttackState { get; private set; }
@@ -64,6 +66,7 @@ public class Player : MonoBehaviour
         wallJumpState = new PlayerWallJumpState(this, StateMachine, playerData, "inAir");
         WallSlideState = new PlayerWallSlideState(this, StateMachine, playerData, "wallSlide");
         PrimaryAttackState = new PlayerAttackState(this, StateMachine, playerData, "attack");
+        SecondaryAttackState = new PlayerAttack2State(this, StateMachine, playerData, "attack2");
         //RangedAttackState = new PlayerAttackState(this, StateMachine, playerData, "rangedAttack");
         AirAttackState = new PlayerAirAttackState(this, StateMachine, playerData, "airAttack");
        //s AirRangedAttackState = new PlayerAttackState(this, StateMachine, playerData, "airRangedAttack");
@@ -81,14 +84,15 @@ public class Player : MonoBehaviour
 
     private void Update()
     {
-        currentVelocity =rb.linearVelocity;
+        currentVelocity = rb.linearVelocity;
         StateMachine.CurrentState.LogicUpdate();
-
+        
     }
 
     private void FixedUpdate()
     {
         StateMachine.CurrentState.PhysicsUpdate();
+        
     }
     #endregion
 
@@ -103,13 +107,17 @@ public class Player : MonoBehaviour
     }
     public void SetVelocityX(float velocity)
     {
-        workspace.Set(velocity, currentVelocity.y);
+        workspace.Set(velocity, rb.linearVelocity.y);
         rb.linearVelocity = workspace;
-        currentVelocity =workspace;    
+        currentVelocity =workspace;
+        if (velocity == 0)
+        {
+            Debug.Log($"SpeedX = {rb.linearVelocity.x}");
+        }
     }
     public void SetVelocityY(float velocity) 
     {
-        workspace.Set(currentVelocity.x, velocity);
+        workspace.Set(rb.linearVelocity.x, velocity);
         rb.linearVelocity = workspace;
         currentVelocity =workspace;
     }

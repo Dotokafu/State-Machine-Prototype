@@ -21,6 +21,10 @@ public class PlayerData : ScriptableObject
     [Header("Wall Slide State")]
     public float wallSlideSpeed = 3f;
 
+    [Header("Attack State")]
+
+    public float attackVelocity = 10f;
+
 
 
     [Header("Check Veriables")]

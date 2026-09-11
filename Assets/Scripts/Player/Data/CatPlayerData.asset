@@ -21,6 +21,7 @@ MonoBehaviour:
   cayoteTime: 0.2
   variableJumpHeightMultiplier: 0.5
   wallSlideSpeed: 3
+  attackVelocity: 4
   GroundCheckRadius: 0.15
   wallCheckDistance: 0.5
   groundLayer:
