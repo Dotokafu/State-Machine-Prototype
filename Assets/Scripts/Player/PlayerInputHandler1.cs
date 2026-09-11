@@ -12,9 +12,14 @@ public class PlayerInputHandler1 : MonoBehaviour
     public bool JumpInput {  get; private set; }
     public bool JumpInputStop { get; private set; }
 
+    public bool AttackInput {  get; private set; }
+    public bool RangedAttackInput { get; private set ; }
+
     [SerializeField] private float inputHoldTime = 0.2f;
 
     private float jumpInputStartTime;
+    private float attackInputStartTime;
+    private float rangedAttackInputStartTime;
 
 
     private void Awake()
@@ -35,9 +40,18 @@ public class PlayerInputHandler1 : MonoBehaviour
         CheckInputHoldTime();
 
         RawMoveInput = actions.Player.Move.ReadValue<Vector2>();
-        NormInputX = (int)(RawMoveInput * Vector2.right).normalized.x;
-        NormInputY = (int)(RawMoveInput * Vector2.up).normalized.y;
-
+        NormInputX = Mathf.RoundToInt(RawMoveInput.x);
+        NormInputY = Mathf.RoundToInt(RawMoveInput.y);
+        if (actions.Player.Attack.WasPressedThisFrame())
+        {
+            AttackInput = true;
+            attackInputStartTime = Time.time;
+        }
+        if (actions.Player.RangedAttack.WasPressedThisFrame())
+        {
+            RangedAttackInput = true;
+            rangedAttackInputStartTime = Time.time; 
+        }
         if (actions.Player.Jump.WasPressedThisFrame())
         {
             JumpInput = true;
@@ -54,11 +68,27 @@ public class PlayerInputHandler1 : MonoBehaviour
     {
         JumpInput = false;
     }
+    public void UseRangedAttackInput()
+    {
+        RangedAttackInput = false;
+    }
+    public void UseAttackInput()
+    {
+        AttackInput = false;
+    }
     private void CheckInputHoldTime()
     {
         if (Time.time >= jumpInputStartTime + inputHoldTime)
         {
             JumpInput =false;
+        }
+        if (Time.time >= attackInputStartTime + inputHoldTime)
+        {
+            AttackInput = false;
+        }
+        if (Time.time >= rangedAttackInputStartTime + inputHoldTime)
+        {
+            RangedAttackInput = false;
         }
     }
 }

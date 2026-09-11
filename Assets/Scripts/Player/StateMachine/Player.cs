@@ -13,6 +13,16 @@ public class Player : MonoBehaviour
 
     public PlayerWallJumpState wallJumpState { get; private set; }
 
+    public PlayerAttackState PrimaryAttackState { get; private set; }
+
+    //public PlayerAttackState RangedAttackState { get; private set; }
+
+    public PlayerAirAttackState AirAttackState { get; private set; }
+
+   // public PlayerAttackState AirRangedAttackState { get; private set; }
+
+
+
 
 
     public PlayerWallSlideState WallSlideState { get; private set; }
@@ -53,7 +63,11 @@ public class Player : MonoBehaviour
         InAirState = new PlayerInAirState(this, StateMachine, playerData, "inAir");
         wallJumpState = new PlayerWallJumpState(this, StateMachine, playerData, "inAir");
         WallSlideState = new PlayerWallSlideState(this, StateMachine, playerData, "wallSlide");
- 
+        PrimaryAttackState = new PlayerAttackState(this, StateMachine, playerData, "attack");
+        //RangedAttackState = new PlayerAttackState(this, StateMachine, playerData, "rangedAttack");
+        AirAttackState = new PlayerAirAttackState(this, StateMachine, playerData, "airAttack");
+       //s AirRangedAttackState = new PlayerAttackState(this, StateMachine, playerData, "airRangedAttack");
+
         InputHandler = GetComponent<PlayerInputHandler1>();
     }
 
@@ -134,7 +148,7 @@ public class Player : MonoBehaviour
         StateMachine.CurrentState.AnimationTrigger();
     }
 
-    private void AnimationFinnishTrigger()
+    private void AnimationFinishTrigger()
     {
         StateMachine.CurrentState.AnimationFinishTrigger();
     }
