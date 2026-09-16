@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 public class Player : MonoBehaviour
 {
@@ -17,11 +18,10 @@ public class Player : MonoBehaviour
 
     public PlayerAttack2State SecondaryAttackState { get; private set; }
 
-    //public PlayerAttackState RangedAttackState { get; private set; }
-
     public PlayerAirAttackState AirAttackState { get; private set; }
 
-   // public PlayerAttackState AirRangedAttackState { get; private set; }
+    public PlayerDeadState DeadState { get; private set; }
+    public PlayerDamageState DamageState { get; private set; }
 
 
 
@@ -52,10 +52,13 @@ public class Player : MonoBehaviour
     public Vector2 currentVelocity { get; private set; }
     private Vector2 workspace;
     public int FacingDirection { get; private set; }
+    public AttackDetails LastAttackDetails { get; private set; }
 
     [SerializeField] private float maxHealth = 100f;
-    [SerializeField] private float knockbackStrength = 5f;
-    [SerializeField] private Vector2 knockbackAngle = new Vector2(1f, 1f);
+  
+
+    [SerializeField] private Transform respawnPoint;
+    [SerializeField] private float respawnDelay = 1.5f;
 
     private float currentHealth;
     #endregion
@@ -74,9 +77,10 @@ public class Player : MonoBehaviour
         WallSlideState = new PlayerWallSlideState(this, StateMachine, playerData, "wallSlide");
         PrimaryAttackState = new PlayerAttackState(this, StateMachine, playerData, "attack");
         SecondaryAttackState = new PlayerAttack2State(this, StateMachine, playerData, "attack2");
-        //RangedAttackState = new PlayerAttackState(this, StateMachine, playerData, "rangedAttack");
         AirAttackState = new PlayerAirAttackState(this, StateMachine, playerData, "airAttack");
-       //s AirRangedAttackState = new PlayerAttackState(this, StateMachine, playerData, "airRangedAttack");
+        DamageState = new PlayerDamageState(this, StateMachine, playerData, "damage");
+        DeadState = new PlayerDeadState(this, StateMachine, playerData, "dead");
+     
 
         InputHandler = GetComponent<PlayerInputHandler1>();
     }
@@ -162,14 +166,16 @@ public class Player : MonoBehaviour
     private void Damage(AttackDetails attackDetails)
     {
         currentHealth -= attackDetails.damageAmount;
-
-        int direction = attackDetails.position.x < transform.position.x ? 1 : -1;
-        SetVelocity(knockbackStrength, knockbackAngle, direction);
+        LastAttackDetails = attackDetails;
+        
 
         if (currentHealth <= 0f)
         {
-            Debug.Log("Player died");
-            // olum durumu
+            StateMachine.ChangeState(DeadState);
+        }
+        else
+        {
+            StateMachine.ChangeState(DamageState);
         }
     }
     private void AnimationTrigger()
@@ -189,6 +195,24 @@ public class Player : MonoBehaviour
     private void OnDrawGizmos()
     {
         Gizmos.DrawWireSphere(AttackPosition.position, playerData.attackRadius);
+    }
+    public void StartRespawnTimer()
+    {
+        StartCoroutine(RespawnRoutine());
+    }
+
+    private IEnumerator RespawnRoutine()
+    {
+        yield return new WaitForSeconds(respawnDelay);
+        Respawn();
+    }
+
+    private void Respawn()
+    {
+        currentHealth = maxHealth;
+        transform.position = respawnPoint.position;
+        rb.linearVelocity = Vector2.zero;
+        StateMachine.ChangeState(IdleState);
     }
     #endregion
 }

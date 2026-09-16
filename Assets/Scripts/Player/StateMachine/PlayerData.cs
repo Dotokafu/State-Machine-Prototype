@@ -26,6 +26,8 @@ public class PlayerData : ScriptableObject
     public float attackVelocity = 10f;
     public float attackDamage;
     public float attackRadius;
+    public Vector2 knockbackAngle;
+    public float knockbackStrength;
     public LayerMask damagableLayer;
 
     
