@@ -44,6 +44,7 @@ public class Player : MonoBehaviour
     #region Check Transforms
     [SerializeField] private Transform GroundCheck;
     [SerializeField] private Transform WallCheck;
+    [field: SerializeField] public Transform AttackPosition { get; private set; }
 
     #endregion
 
@@ -51,6 +52,12 @@ public class Player : MonoBehaviour
     public Vector2 currentVelocity { get; private set; }
     private Vector2 workspace;
     public int FacingDirection { get; private set; }
+
+    [SerializeField] private float maxHealth = 100f;
+    [SerializeField] private float knockbackStrength = 5f;
+    [SerializeField] private Vector2 knockbackAngle = new Vector2(1f, 1f);
+
+    private float currentHealth;
     #endregion
 
     #region UnityCallBackFunctions
@@ -80,6 +87,7 @@ public class Player : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         StateMachine.Initilazie(IdleState);
         FacingDirection = 1;
+        currentHealth = maxHealth;
     }
 
     private void Update()
@@ -145,12 +153,25 @@ public class Player : MonoBehaviour
     {
         return Physics2D.Raycast(WallCheck.position, Vector2.right * -FacingDirection, playerData.wallCheckDistance, playerData.groundLayer);
     }
+
     #endregion
 
 
     #region Other Functions
 
+    private void Damage(AttackDetails attackDetails)
+    {
+        currentHealth -= attackDetails.damageAmount;
 
+        int direction = attackDetails.position.x < transform.position.x ? 1 : -1;
+        SetVelocity(knockbackStrength, knockbackAngle, direction);
+
+        if (currentHealth <= 0f)
+        {
+            Debug.Log("Player died");
+            // olum durumu
+        }
+    }
     private void AnimationTrigger()
     {
         StateMachine.CurrentState.AnimationTrigger();
@@ -164,6 +185,10 @@ public class Player : MonoBehaviour
     {
         FacingDirection *= -1;
         transform.Rotate(0.0f, 180.0f, 0.0f);
+    }
+    private void OnDrawGizmos()
+    {
+        Gizmos.DrawWireSphere(AttackPosition.position, playerData.attackRadius);
     }
     #endregion
 }

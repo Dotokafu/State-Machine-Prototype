@@ -22,6 +22,11 @@ MonoBehaviour:
   variableJumpHeightMultiplier: 0.5
   wallSlideSpeed: 3
   attackVelocity: 4
+  attackDamage: 10
+  attackRadius: 0.6
+  damagableLayer:
+    serializedVersion: 2
+    m_Bits: 256
   GroundCheckRadius: 0.15
   wallCheckDistance: 0.5
   groundLayer:

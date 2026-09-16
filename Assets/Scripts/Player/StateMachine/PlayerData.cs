@@ -24,6 +24,11 @@ public class PlayerData : ScriptableObject
     [Header("Attack State")]
 
     public float attackVelocity = 10f;
+    public float attackDamage;
+    public float attackRadius;
+    public LayerMask damagableLayer;
+
+    
 
 
 

@@ -13,7 +13,7 @@ public class CombatDummyController : MonoBehaviour
     private int playerFacingDirection;
     private bool playerOnLeft,knockback;
 
-    private PlayerController playerController;
+    
     private GameObject aliveGO,brokenTopGO,brokenBottomGO;
     private Rigidbody2D rbAlive, rbBrokenTop, rbBrokenBottom;
     private Animator aliveAnim;
@@ -24,7 +24,7 @@ public class CombatDummyController : MonoBehaviour
     {
         currentHealth = maxHealth;
 
-        playerController = GameObject.Find("Player").GetComponent<PlayerController>();
+        
         aliveGO = transform.Find("Alive").gameObject;
         brokenBottomGO = transform.Find("BrokenBottom").gameObject;
         brokenTopGO = transform.Find("BrokenTop").gameObject;

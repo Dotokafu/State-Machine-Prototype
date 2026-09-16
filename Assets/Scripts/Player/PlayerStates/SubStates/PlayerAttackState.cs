@@ -29,7 +29,21 @@ public class PlayerAttackState : PlayerAbilityState
     {
         base.AnimationTrigger();
 
+        Collider2D[] detectedObjects = Physics2D.OverlapCircleAll(player.AttackPosition.position, playerData.attackRadius, playerData.damagableLayer);
+
+        AttackDetails attackDetails = new AttackDetails
+        {
+            damageAmount = playerData.attackDamage,
+            position = player.transform.position
+        };
+
+        foreach (Collider2D obj in detectedObjects)
+        {
+            obj.transform.root.SendMessage("Damage", attackDetails);
+
+        }
     }
+
 
     public override void DoChecks()
     {
