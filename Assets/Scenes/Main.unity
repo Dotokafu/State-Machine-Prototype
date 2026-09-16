@@ -97509,6 +97509,16 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
+  - first: {x: 91, y: 11, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 0
+      m_TileSpriteIndex: 0
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
   - first: {x: 92, y: 11, z: 0}
     second:
       serializedVersion: 2
@@ -132541,7 +132551,7 @@ Tilemap:
       m_AllTileFlags: 1073741825
   m_AnimatedTiles: {}
   m_TileAssetArray:
-  - m_RefCount: 13141
+  - m_RefCount: 13142
     m_Data: {fileID: 11400000, guid: d865e86a462e08640971ef6296efbe30, type: 2}
   - m_RefCount: 28
     m_Data: {fileID: 11400000, guid: 32d6424f897afef4f9dadd67180f216b, type: 2}
@@ -132560,7 +132570,7 @@ Tilemap:
   - m_RefCount: 5
     m_Data: {fileID: 11400000, guid: f87791e49cc272045b63761f1594578d, type: 2}
   m_TileSpriteArray:
-  - m_RefCount: 13141
+  - m_RefCount: 13142
     m_Data: {fileID: 5554216122756231235, guid: b6ee06e14a5be494582320f70eb04bd9, type: 3}
   - m_RefCount: 28
     m_Data: {fileID: 1293531476, guid: b6ee06e14a5be494582320f70eb04bd9, type: 3}
@@ -132579,7 +132589,7 @@ Tilemap:
   - m_RefCount: 5
     m_Data: {fileID: 2029380156, guid: b6ee06e14a5be494582320f70eb04bd9, type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 13170
+  - m_RefCount: 13171
     m_Data:
       e00: 1
       e01: 0
@@ -132688,7 +132698,7 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 13175
+  - m_RefCount: 13176
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
@@ -132910,10 +132920,6 @@ CompositeCollider2D:
       - X: 910000000
         Y: 150000000
       - X: 910000000
-        Y: 120000000
-      - X: 920000000
-        Y: 120000000
-      - X: 920000000
         Y: 110000000
       - X: 400000000
         Y: 110000000
@@ -133111,9 +133117,7 @@ CompositeCollider2D:
       - {x: 90, y: 15.999971}
       - {x: 90.00003, y: 15}
       - {x: 91, y: 14.999971}
-      - {x: 91.00003, y: 12}
-      - {x: 92, y: 11.99997}
-      - {x: 91.99997, y: 11}
+      - {x: 90.99997, y: 11}
       - {x: 40, y: 10.99997}
       - {x: 39.999973, y: 10}
       - {x: 30, y: 9.99997}
