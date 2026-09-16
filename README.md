@@ -18,7 +18,7 @@ The Web Build allows you to try the prototype directly in your browser without d
 
 ## State Machine
 
-![State Machine Diagram](Documentation/FSM.png)
+![State Machine Diagram](FSM.png)
 
 The project contains two main state machines:
 
